@@ -1,0 +1,267 @@
+/*General styles*/
+
+.fl {
+  float: left;
+}
+
+.fr {
+  float: right;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body, html {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+
+body {
+  background: url(../img/bckg.jpg);
+  background-size: 100%;
+}
+
+/*header styles*/
+
+header {
+  border-bottom: 3px dashed #be035e;
+  background: rgba(255, 255, 255, 0.7);
+}
+
+@keyframes wobble {
+  33% {
+    transform: translateX(-50px);
+  }
+  66% {
+    transform: translateX(50px);
+  }
+}
+
+@-moz-keyframes wobble {
+  33% {
+    transform: translateX(-50px);
+  }
+  66% {
+    transform: translateX(50px);
+  }
+}
+
+@-webkit-keyframes wobble {
+  33% {
+    transform: translateX(-50px);
+  }
+  66% {
+    transform: translateX(50px);
+  }
+}
+
+.logo-section img {
+  width: 140px;
+}
+
+.logo-section img:hover {
+  -webkit-animation: wobble 4s linear infinite;
+  -moz-animation: wobble 4s linear infinite;
+  animation: wobble 4s linear infinite;
+}
+
+.welcome {
+  font-family: 'Bungee Inline', cursive;
+  vertical-align: middle;
+  color: #90156d;
+  font-size: 30px;
+  margin: 40px auto;
+}
+
+.header-right {
+  text-align: right;
+  padding: 15px;
+}
+
+p.subtitle {
+  font-family: 'Cabin Sketch', cursive;
+  font-size: 24px;
+  color: #91156d;
+  text-align: right;
+  margin-top: -40px
+}
+
+p.subtitle i {
+  font-size: 35px;
+  vertical-align: text-bottom;
+  color: #990678;
+}
+
+/*contents styles*/
+
+.content {
+  background: rgba(255, 255, 255, 0.7);
+}
+
+.card {
+  background: url(../img/top-section.jpg);
+  background-size: 100%;
+  min-height: 520px;
+  background-repeat: no-repeat;
+}
+
+.card-data {
+  margin: 0 auto;
+  padding: 60px;
+  position: relative;
+}
+
+.card-data * {
+  font-family: 'Cabin Sketch', cursive;
+  /* font-family: 'Bungee Inline', cursive;
+     */
+  text-align: left;
+}
+
+.card-data h1 {
+  color: #990678;
+  font-size: 70px;
+}
+
+.card-data h2 {
+  color: #dd0449;
+  font-size: 66px;
+  margin: 45px auto;
+}
+
+.card-data h3 {
+  color: #b65717;
+  font-size: 35px;
+  position: absolute;
+  top: 90%;
+  font-family: 'Bungee Inline', cursive;
+}
+
+.small-card img {
+  width: 100%;
+  -webkit-box-shadow: 2px 2px 3px 0px rgba(145, 21, 109, 0.2);
+  -moz-box-shadow: 2px 2px 3px 0px rgba(145, 21, 109, 0.2);
+  box-shadow: 2px 2px 3px 0px rgba(145, 21, 109, 0.2);
+}
+
+h1.featured {
+  font-family: 'Bungee Inline', cursive;
+  color: #222;
+}
+
+.small-card h3 {
+  font-family: 'Cabin Sketch', cursive;
+  color: #222;
+}
+
+/*Footer*/
+
+#sticky-footer {
+  padding: 20px;
+  background: #222;
+  color: #fff;
+  font-size: 18px;
+  text-align: center;
+  font-family: 'Cabin Sketch', cursive;
+  position: relative;
+  bottom: 0;
+  min-height: 65px;
+  background-image: url(http://rs257.pbsrc.com/albums/hh234/tfm448/Snow411.gif~c200)
+}
+
+.social-media {
+  list-style: none;
+}
+
+.social-media li {
+  display: inline-block;
+}
+
+.social-media li a {
+  color: #fff;
+  margin: auto 5px;
+  font-size: 22px;
+}
+
+/*Resposnsive*/
+
+@media only screen and (min-width: 320px) and (max-width: 990px) {
+  .header-right {
+    text-align: center;
+    padding: 25px 5px;
+  }
+  p.subtitle {
+    font-size: 22px;
+    margin: auto;
+    text-align: center;
+    margin-bottom: 5px;
+  }
+  p.subtitle i {
+    font-size: 30px;
+  }
+  p.subtitle i.glyphicon-hand-left:before {
+    content: "\e129";
+  }
+  .welcome {
+    text-align: center;
+    margin: auto;
+  }
+  .card {
+    background: url(../img/top-section.jpg) #c5c5c5;
+    background-size: contain;
+    min-height: 500px;
+    background-repeat: no-repeat;
+  }
+  .card-data {
+    padding: 25px;
+  }
+  .card-data h3 {
+    text-align: center;
+  }
+  .small-card {
+    border-bottom: 2px dashed rgba(145, 21, 109, 0.2);
+    padding: 10px;
+    margin: 5px auto;
+  }
+  h1.featured {
+    margin: 5px;
+    margin-top: 15px;
+  }
+  #sticky-footer{
+    min-height: 90px;
+  }
+}
+
+/*for ipad*/
+
+@media only screen and (max-width: 990px) and (min-width: 768px) {
+  .header-right {
+    text-align: right;
+    padding: 5px;
+  }
+  p.subtitle {
+    font-size: 24px;
+    margin: auto;
+    text-align: center;
+    margin-bottom: 5px;
+    margin-top: -40px;
+  }
+  p.subtitle i {
+    font-size: 30px;
+  }
+  p.subtitle i.glyphicon-hand-left:before {
+    content: "\e128";
+  }
+  .welcome {
+    text-align: center;
+    margin: 20px;
+  }
+  .card-data h3 {
+    top: 110%;
+  }
+  h1.featured {
+    font-size: 44px;
+  }
+}
